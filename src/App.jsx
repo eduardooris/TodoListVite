@@ -4,11 +4,11 @@ import Navigation from './components/Navigation'
 function App() {
   const [isLogin, setIsLogin] = useState(false)
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       {isLogin &&
         <Navigation />
       }
-      <div style={styles.containerMain}>
+      <div>
         <Router />
       </div>
     </div>

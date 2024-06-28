@@ -1,12 +1,13 @@
 export default {
-    background: "#ffffff",
-    backgroundMenu: "#f4f4f4",
-    backgroundCardOnboarding: "#fff9f9",
-    colorText: "#000000",
-    secundary: "#76de37",
-    success: "#76de37",
-    error: "#ff0000",
-    warning: "#ffcc00",
+    // background: "#ffffff",
+    // backgroundOnboarding: "#c4c4c4",
+    // backgroundMenu: "#f4f4f4",
+    // backgroundCardOnboarding: "#fff9f9",
+    // colorText: "#000000",
+    // secundary: "#76de37",
+    // success: "#76de37",
+    // error: "#ff0000",
+    // warning: "#ffcc00",
     typography: {
         h1: {
             fontSize: "24px",
