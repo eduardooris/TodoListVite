@@ -1,21 +1,28 @@
 import React, { useState } from 'react'
 import Router from './router'
-import { Link } from 'react-router-dom'
+import Navigation from './components/Navigation'
 function App() {
   const [isLogin, setIsLogin] = useState(false)
   return (
-    <div style={{ display: "flex", }}>
+    <div style={{ display: "flex" }}>
       {isLogin &&
-        <div style={{ background: "#1e1", display: "flex", flexDirection: "column", height: "100vh" }}>
-          <Link to={'/'}>Login</Link>
-          <Link to={'/home'}>Home</Link>
-        </div>
+        <Navigation />
       }
-      <div>
+      <div style={styles.containerMain}>
         <Router />
       </div>
     </div>
   )
+}
+
+const styles = {
+  containerMain: {
+    height: "96vh",
+    width: '80%',
+    borderRadius: 40,
+    padding: 30,
+    margin: 20
+  }
 }
 
 export default App
