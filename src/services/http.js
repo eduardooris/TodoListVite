@@ -1,4 +1,4 @@
-const baseUrl = 'http://34.232.85.214:3000//api';
+const baseUrl = 'http://34.232.85.214:3000/api';
 export const accessTokenKey = 'accessToken';
 const refreshTokenKey = 'refreshToken';
 
@@ -60,13 +60,13 @@ export const clearTokens = () => {
 
 export const http = async ({ url, method, body, headers = {} }) => {
     try {
-        const accessToken = getStoredToken(accessTokenKey);
+        // const accessToken = getStoredToken(accessTokenKey);
         let response = await fetch(`${baseUrl}/${url}`, {
             method,
             body: body ? JSON.stringify(body) : null,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${accessToken}`,
+                // Authorization: `Bearer ${accessToken}`,
                 ...headers,
             },
         });

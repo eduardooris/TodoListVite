@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import Router from './router'
-import Design from './Design/Colors'
 import Navigation from './components/Navigation'
 function App() {
   const [isLogin, setIsLogin] = useState(false)
   return (
     <div style={{ display: "flex" }}>
-      {!isLogin &&
+      {isLogin &&
         <Navigation />
       }
       <div style={styles.containerMain}>
