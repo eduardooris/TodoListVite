@@ -4,7 +4,7 @@ import { useForm } from "../../hooks/useForm"
 
 export default function Login() {
     const navigate = useNavigate()
-    const [form, setForm] = useForm({ username: "", password: "", email: "" })
+    const [form, setForm] = useForm({ username: "", password: ""})
     const navegar = () => {
         navigate('/home')
 
