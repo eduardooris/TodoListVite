@@ -1,18 +1,16 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import React from "react";
 
-import App from "../App.jsx";
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-    },
-]);
+import Home from "../views/Home";
+import Login from "../views/Login";
+
 
 export default function Router() {
-    return <RouterProvider router={router} />;
+    return (
+        <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+        </Routes>
+    )
 }
 

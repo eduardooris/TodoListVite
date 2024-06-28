@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c4c4c4;
+  background-position: center;
+  background-size: cover;
+}
