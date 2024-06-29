@@ -20,7 +20,10 @@ export default function Onboarding() {
                     <p className={Style.p}>Mantenha-se organizado: seu aplicativo definitivo de lista de tarefas. <b></b>Um aplicativo de lista de tarefas é uma ferramenta digital de gerenciamento de tarefas
                         projetadas para ajudar os usuários a organizar e priorizar suas atividades e responsabilidades diárias.</p>
                     <Button onClick={() => navegar('/register')}>Começar</Button>
-                    <button onClick={() => navegar("/login")} className={Style.btnEnt}>Já tem uma conta? Entrar</button>
+                    <div className={Style.entrar}>
+                        <span>Já tem uma conta?</span>
+                    <button onClick={() => navegar("/login")} className={Style.btnEnt}>Entrar</button>
+                    </div>
                 </div></Container>
             </div>
         </div>

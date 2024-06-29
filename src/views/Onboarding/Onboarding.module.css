@@ -40,10 +40,24 @@
 .btnEnt {
 border: none;
 background: transparent;
-margin-top: 15px;
 cursor: pointer;
+color: #76de37;
+font-weight: bold;
 }
 
 .btnEnt:hover {
     text-decoration: underline;
+    color: #69c530;
+    transition: all 0.2s ease-in-out;
+}
+
+.entrar {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+span {
+    font-size: 13px;
+    margin-right: 5px;
 }
