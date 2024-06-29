@@ -28,11 +28,14 @@ export default function Login() {
             <div className={Style.divCon}>
                 <Container><div className={Style.containerprimary}>
                     <h1 className={Style.log}>Login</h1>
-                    <Input name="username" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Nome'}></Input>
-                    <Input name="password" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Senha'}></Input>
-                    {/* <Input type="text" name="email" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'E-mail'}></Input> */}
+                    <Input type="text" name="username" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Nome'}></Input>
+                    <Input type="password" name="password" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Senha'}></Input>
+                    <Input type="text" name="email" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'E-mail'}></Input>
                     <Button onClick={fazerLogin}>Fazer login</Button>
-                    <button onClick={() => navegar()} className={Style.btnEnt}>Não tem uma conta? Registre-se</button>
+                    <div className={Style.entrar}>
+                        <span>Não tem uma conta?</span>
+                    <button onClick={() => navegar()} className={Style.btnEnt}>Registre-se</button>
+                    </div>
                 </div></Container>
             </div>
         </div>
