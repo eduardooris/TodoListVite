@@ -1,12 +1,17 @@
+import Banner from '../../assets/banner.svg'
+import Container from '../../components/container'
+import Style from './login.module.css'
+import Button from '../../components/button'
+import Input from '../../components/input'
 import { useNavigate } from "react-router-dom"
 import { login } from "../../services/auth"
 import { useForm } from "../../hooks/useForm"
 
 export default function Login() {
     const navigate = useNavigate()
-    const [form, setForm] = useForm({ username: "", password: ""})
+    const [form, setForm] = useForm({ username: "", password: "" })
     const navegar = () => {
-        navigate('/home')
+        navigate('/register')
 
     }
 
@@ -18,12 +23,18 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <h1>Login</h1>
-            <input name="username" onChange={setForm} />
-            <input name="password" onChange={setForm} />
-            <input type="text" name="email" onChange={setForm} />
-            <button onClick={fazerLogin}>Fazer login</button>
+        <div className={Style.body}>
+            <Container><img className={Style.img} src={Banner} alt="My Icon" /></Container>
+            <div className={Style.divCon}>
+                <Container><div className={Style.containerprimary}>
+                    <h1 className={Style.log}>Login</h1>
+                    <Input name="username" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Nome'}></Input>
+                    <Input name="password" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'Senha'}></Input>
+                    {/* <Input type="text" name="email" style={{marginBottom: '20px'}} onChange={setForm} placeholder={'E-mail'}></Input> */}
+                    <Button onClick={fazerLogin}>Fazer login</Button>
+                    <button onClick={() => navegar()} className={Style.btnEnt}>Não tem uma conta? Registre-se</button>
+                </div></Container>
+            </div>
         </div>
     )
 }
